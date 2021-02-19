@@ -2,7 +2,7 @@ var menu = document.querySelector(".menu");
 var navOpen = document.querySelector(".hamburger");
 var navClose = document.querySelector(".close");
 var productsFilter = document.querySelector('#products-filter');
-console.log(productsFilter);
+//console.log(productsFilter);
 
 var navOpenH3 = document.querySelector(".nav-footer h3")
 navOpenH3.addEventListener("click", () => {
@@ -14,7 +14,7 @@ navOpenH3.addEventListener("click", () => {
 });
 var navLeft = menu.getBoundingClientRect().left;
 navOpen.addEventListener("click", () => {
-  //console.log(123);
+  console.log(123);
   if (navLeft < 0) {
     menu.classList.add("show");
     document.body.classList.add("show");
@@ -69,13 +69,17 @@ links.map(link => {
 
 gsap.from(".logo", { opacity: 0, duration: 1, delay: 0.5, y: -10 });
 gsap.from(".hamburger", { opacity: 0, duration: 1, delay: 1, x: 20 });
+gsap.from(".hero-img", { opacity: 0, duration: 1, delay: 1.1, x: 200 });
+gsap.from(".hero-content h1", { opacity: 0, duration: 1, delay: 2.5, y: -45 });
+gsap.from(".hero-content h2", { opacity: 0, duration: 1, delay: 2.2, y: -50 });
+gsap.from(".hero-content a", { opacity: 0, duration: 1, delay: 2, y: -50 });
 
 function filter(e) {
     e.preventDefault();
     console.log(123);
 }
 
-
+/*
 productsFilter.addEventListener('click', (event) => {
     event.preventDefault(); 
     var values = $( "#slider-range" ).slider( "option", "values" );
@@ -86,7 +90,7 @@ productsFilter.addEventListener('click', (event) => {
    console.log(volume_40);
    //console.log(123); 
 });
-
+*/
 
 
 
